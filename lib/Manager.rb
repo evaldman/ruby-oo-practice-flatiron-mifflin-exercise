@@ -13,7 +13,12 @@ end
 def self.all
     @@all
 end
-def 
+def employees
+
+    Department.all.select{|department| department.employee.manager == self}
+    #binding.pry
+end
+
 
 
 end
