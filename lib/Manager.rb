@@ -30,4 +30,10 @@ def self.department
     self.all.map {|man| man.department}.uniq
 end
 
+def self.avg_age
+    binding.pry
+    ages = self.save.collect(&:age)
+    (ages.sum.to_f / ages.count).round(2)
+end
+
 end
