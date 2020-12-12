@@ -20,7 +20,7 @@ There are **no** tests! You will need to test your code on your own!
 First step to this problem is to consider your domain. At Flatiron Mifflin, an `Employee` will only have one `Manager` but a manager can have many `Employee`s. Each `Department` can have many `Employee`s and each `Employee` only has one `Department`.
 ​
 Here are some questions to consider:
-- What are your models?
+- What are your models? Man -< Emp >- Role
 - What does your domain look like?
 - What are the relationships between your models?
 ​

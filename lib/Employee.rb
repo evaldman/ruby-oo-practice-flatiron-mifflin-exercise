@@ -1,12 +1,10 @@
 class Employee
-    attr_reader :name
-    attr_accessor :salary, :manager
+    attr_accessor :salary, :name
     
     @@all = []
     
-    def initialize(name, manager, salary)
+    def initialize(name, salary)
             @name = name
-            @manager = manager
             @salary = salary
             @@all << self
     end
@@ -14,4 +12,8 @@ class Employee
         @@all
     end
     
+    def department
+        Department.all.select { |x| x.employee == self}
+    end
+
 end

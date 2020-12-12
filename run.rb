@@ -1,14 +1,22 @@
 require_relative "lib/Manager"
 require_relative "lib/Employee"
-require_relative "./department"
+require_relative "lib/Role"
 require 'pry'
 
-manager1 = Manager.new("Michael", "sales", 48)
+# Managers
+man1 = Manager.new("Michael", "Sales", 48)
+man2 = Manager.new("Kelly", "Customer Service", 32)
+man3 = Manager.new("Darrell", "Sales", 47)
 
-#Test your code here
-employee1 = Employee.new("Jim", "Michael", 50000)
+# Employees
+emp1 = Employee.new("Jim", 50000)
+emp2 = Employee.new("Pam", 60000)
+emp3 = Employee.new("Ryan", 75000)
 
-dep1 = Department.new("sales", manager1, employee1)
+# Roles
+role1 = Role.new("Salesperson")
+role2 = Role.new("Warehouse")
+role3 = Role.new("HR")
 
 binding.pry
 puts "done"

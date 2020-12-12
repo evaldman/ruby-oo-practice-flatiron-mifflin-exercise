@@ -1,6 +1,5 @@
 class Manager
-attr_reader :name
-attr_accessor :age, :department
+attr_accessor :age, :department, :name
 
 @@all = []
 
@@ -10,15 +9,25 @@ def initialize(name, department, age)
         @age = age
         @@all << self
 end
-def self.all
+
+def self.save
     @@all
 end
-def employees
 
-    Department.all.select{|department| department.employee.manager == self}
-    #binding.pry
+def employees
+    Employee.all.map {|emp| emp.name}
 end
 
+def roles
+    Role.all.map {|role| role.name }
+end
 
+def self.all
+    self.all.map {|man| man.name}
+end
+
+def self.department
+    self.all.map {|man| man.department}.uniq
+end
 
 end
