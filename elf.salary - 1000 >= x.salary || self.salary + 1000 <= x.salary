@@ -1,0 +1,16 @@
+
+[1mFrom:[0m /home/nrepasy21/dev/flatiron/labs/ruby-oo-practice-flatiron-mifflin-exercise/lib/Employee.rb:38 Employee#tax_bracket:
+
+    [1;34m36[0m: [32mdef[0m [1;34mtax_bracket[0m
+    [1;34m37[0m:     
+ => [1;34m38[0m: binding.pry
+    [1;34m39[0m:     [1;34;4mEmployee[0m.all.collect [32mdo[0m |x| 
+    [1;34m40[0m:         [1;36mself[0m.salary - [1;34m1000[0m >= x.salary || [1;36mself[0m.salary + [1;34m1000[0m <= x.salary
+    [1;34m41[0m: 
+    [1;34m42[0m:         
+    [1;34m43[0m: 
+    [1;34m44[0m:     [1;34m#ages = self.save.collect(&:age)[0m
+    [1;34m45[0m:     [1;34m#(ages.sum.to_f / ages.count).round(2)[0m
+    [1;34m46[0m:     [32mend[0m
+    [1;34m47[0m: [32mend[0m
+

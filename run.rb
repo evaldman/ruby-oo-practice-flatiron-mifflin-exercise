@@ -14,7 +14,7 @@ role2 = Role.new("Warehouse")
 role3 = Role.new("HR")
 
 # Employees
-emp1 = Employee.new("Jim", 50000, man1, role1)
+emp1 = Employee.new("Jim", 61000, man1, role1)
 emp2 = Employee.new("Pam", 60000, man1, role3)
 emp3 = Employee.new("Ryan", 75000, man2, role2)
 
