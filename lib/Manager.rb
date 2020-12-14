@@ -10,7 +10,7 @@ def initialize(name, department, age)
         @@all << self
 end
 
-def self.save
+def self.all
     @@all
 end
 
@@ -22,16 +22,13 @@ def roles
     Role.all.map {|role| role.name }
 end
 
-def self.all
-    self.all.map {|man| man.name}
-end
 
-def self.department
+def self.all_departments
     self.all.map {|man| man.department}.uniq
 end
 
 def self.avg_age
-    ages = self.save.collect(&:age)
+    ages = self.all.collect(&:age) #<-- What does this represent?
     (ages.sum.to_f / ages.count).round(2)
 end
 

@@ -17,14 +17,21 @@ class Employee
     
     def manager_name
         self.manager.name
+        #Manager.all.select{|man| man.}
     end
 
     def self.paid_over(amount)
+        #How do we make the code below return every employee it applies to?
+        #How can we condense the code?
+
         self.all.select {|emp| return emp.name if emp.salary > amount}
+
     end
-    
-    def find_department
-        Manager.save.select {|man| man.employees == self}
+
+    def self.find_by_department(department_name)
+        manager_guy = Manager.all.find {|man| man.department == department_name}
+        employee_guy = Employee.all.find {|emp| emp.manager == manager_guy}
+        employee_guy.name
     end
 
     def tax_bracket # What enumerable can we use to shorten this code?
@@ -41,11 +48,10 @@ class Employee
         self.all.find_all {|emp| emp.role.name == role_name }
     end
 
-    def get_promoted(new_role) # Can we make this method more dynamic?
+    def get_promoted(new_role) 
         self.role = new_role
-        self.salary + 1000
+        self.salary += 1000
         self
-          
     end
 
 end

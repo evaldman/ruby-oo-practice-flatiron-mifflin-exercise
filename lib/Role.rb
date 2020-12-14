@@ -14,11 +14,15 @@ attr_reader :name
     end
 
     def employees
-        Employee.all.select {|emp| emp.role == self}
+       Employee.all.select {|emp| emp.role == self}
+        
     end
 
     def managers
-        Employee.all.map {|emp| return emp.manager if emp.role == self}
+        #Express this with pretzels.
+        employees.select{|emp| emp.manager}
+        
+    
     end
 
     def add_employee(name, salary, manager)

@@ -16,7 +16,26 @@ role3 = Role.new("Vice President")
 # Employees
 emp1 = Employee.new("Jim", 61000, man1, role1)
 emp2 = Employee.new("Pam", 60000, man1, role2)
-emp3 = Employee.new("Ryan", 75000, man2, role3)
+emp3 = Employee.new("Ryan", 75000, man2, role1)
 
 binding.pry
 puts "done"
+
+
+
+
+
+
+
+
+
+
+
+
+#employee.paid_over
+
+ # paid = self.all.select {|emp| emp.salary > amount}
+    # paid.map{|paid| paid.name}
+
+#role.managers
+#employees.select(&:manager)
