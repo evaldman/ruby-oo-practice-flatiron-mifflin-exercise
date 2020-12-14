@@ -14,7 +14,7 @@ def self.save
     @@all
 end
 
-def employees
+def employees # Is there another syntax we can use for this method?
     Employee.all.map {|emp| emp.name}
 end
 
@@ -31,7 +31,6 @@ def self.department
 end
 
 def self.avg_age
-    binding.pry
     ages = self.save.collect(&:age)
     (ages.sum.to_f / ages.count).round(2)
 end

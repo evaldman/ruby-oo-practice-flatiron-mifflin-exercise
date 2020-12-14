@@ -6,7 +6,7 @@ require 'pry'
 # Managers
 man1 = Manager.new("Michael", "Sales", 48)
 man2 = Manager.new("Kelly", "Customer Service", 32)
-man3 = Manager.new("Darrell", "Sales", 47)
+man3 = Manager.new("Darrell", "Warehouse", 47)
 
 # Roles
 role1 = Role.new("Salesperson")
