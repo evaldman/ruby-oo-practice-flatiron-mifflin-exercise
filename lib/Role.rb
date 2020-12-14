@@ -26,8 +26,6 @@ attr_reader :name
     end
 
     def add_employee(name, salary, manager)
-        # Is it possible to keep the naming convention (emp1, emp2, etc) when creating new objects with this method?
-        #emp + "#{(Employee.all.count + 1).to_s}"
         Employee.new(name, salary, manager, self)
     end
     
