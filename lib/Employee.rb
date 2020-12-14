@@ -27,7 +27,7 @@ class Employee
         Manager.save.select {|man| man.employees == self}
     end
 
-    def tax_bracket
+    def tax_bracket # What enumerable can we use to shorten this code?
         arr = []
         Employee.all.each do |emp|
             if (self.salary - emp.salary).abs.between?(1,1000) 
@@ -37,14 +37,15 @@ class Employee
         arr
     end
    
-    def self.search_by_role(pos)
-        # POS should be a role String that connects to the role in an Employee object. The following code returns an empty array tho. 
-        self.all.find_all {|emp| emp.role == pos }
-        binding.pry
+    def self.search_by_role(role_name)
+        self.all.find_all {|emp| emp.role.name == role_name }
     end
 
-    def get_promoted(role)
-        # This method seems like the pets buy/sell method and the person conversation method from previous labs.
+    def get_promoted(new_role) # Can we make this method more dynamic?
+        self.role = new_role
+        self.salary + 1000
+        self
+          
     end
 
 end
