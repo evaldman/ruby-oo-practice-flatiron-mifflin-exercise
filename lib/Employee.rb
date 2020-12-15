@@ -15,17 +15,9 @@ class Employee
         @@all
     end
     
-    def manager_name
-        self.manager.name
-        #Manager.all.select{|man| man.}
-    end
-
     def self.paid_over(amount)
-        #How do we make the code below return every employee it applies to?
-        #How can we condense the code?
-
-        self.all.select {|emp| return emp.name if emp.salary > amount}
-
+        paid = self.all.select {|emp| emp.salary > amount}
+        paid.map{|paid| paid.name}
     end
 
     def self.find_by_department(department_name)

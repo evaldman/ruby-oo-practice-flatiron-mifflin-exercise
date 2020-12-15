@@ -14,14 +14,18 @@ def self.all
     @@all
 end
 
+def all_employees
+    Employee.all.select {|emp| emp.manager == self}
+end
+
+
 def employees # Is there another syntax we can use for this method?
-    Employee.all.map {|emp| emp.name}
+    self.all_employees.map {|emp| emp.name}
 end
 
 def roles
-    Role.all.map {|role| role.name }
+    self.all_employees.map {|emp| emp.role }.uniq
 end
-
 
 def self.all_departments
     self.all.map {|man| man.department}.uniq

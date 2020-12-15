@@ -34,8 +34,6 @@ puts "done"
 
 #employee.paid_over
 
- # paid = self.all.select {|emp| emp.salary > amount}
-    # paid.map{|paid| paid.name}
-
+ 
 #role.managers
 #employees.select(&:manager)

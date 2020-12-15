@@ -15,14 +15,11 @@ attr_reader :name
 
     def employees
        Employee.all.select {|emp| emp.role == self}
-        
     end
 
     def managers
         #Express this with pretzels.
         employees.select{|emp| emp.manager}
-        
-    
     end
 
     def add_employee(name, salary, manager)
